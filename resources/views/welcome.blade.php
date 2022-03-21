@@ -42,9 +42,10 @@
                     {{-- <a class="nav-link disabled">Disabled</a> --}}
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <form method="get" action="{{ route('dealer.search') }}" class="form-inline my-2 my-lg-0">
+                {{-- @csrf --}}
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" >Search</button>
             </form>
         </div>
     </nav>

@@ -25,5 +25,6 @@ Route::prefix('dealer')->group(function () {
     Route::post('create', [DealerController::class, 'store'])->name('dealer.store');
     Route::get('update/{id}', [DealerController::class, 'edit'])->name('dealer.edit');
     Route::post('update/{id}', [DealerController::class, 'update'])->name('dealer.update');
-    Route::get('delete', [DealerController::class, 'destroy'])->name('dealer.delete');
+    Route::get('delete/{id}', [DealerController::class, 'destroy'])->name('dealer.delete');
+    Route::get('/search/',[DealerController::class, 'search'])->name('dealer.search');
 });

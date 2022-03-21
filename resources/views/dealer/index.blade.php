@@ -1,9 +1,9 @@
 @extends('welcome')
-@section('title','Create')
+@section('title','Home')
 @section('content')
 
 <div class="mt-3">
-    <a href="" class="btn btn-success">Success</a>
+    <a href="{{route('dealer.create')}}" class="btn btn-success">Thêm mới</a>
 </div>
 
 
@@ -32,8 +32,8 @@
                 <td>{{$dealer->address}}</td>
                 <td>{{$dealer->name}}</td>
                 <td>{{$dealer->statusname}}</td>
-                <td><a href="">Edit</a></td>
-                <td><a onclick="return confirm('Are you sure?')" href="">Delete</a></td>
+                <td><a href="{{route('dealer.edit',$dealer->id)}}">Sửa</a></td>
+                <td><a onclick="return confirm('Bạn có muốn xóa đại lý {{$dealer->dealername}} này không ?')" href="{{route('dealer.delete',$dealer->id)}}">Xóa</a></td>
             </tr>
         @endforeach
     </tbody>
