@@ -2,7 +2,7 @@
 @section('title', 'Create')
 @section('content')
     <div class="container mt-5">
-        <h3>Thêm mới đại lý phân phối</h3>
+        <h3>Sửa đại lý phân phối</h3>
         <form method="POST">
             @csrf
             <div class="form-row">
